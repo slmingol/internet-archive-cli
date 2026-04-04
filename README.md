@@ -56,10 +56,12 @@ This project uses GitHub Actions for automated version management and Docker ima
 
 ### Semantic Versioning
 
-Commits trigger automatic version bumps based on commit messages:
-- patch bump - Regular commits
-- minor bump - Commits with feat: or feature:
-- major bump - Commits with BREAKING CHANGE or major:
+Commits to main trigger automatic version bumps based on commit messages:
+- patch bump - Regular commits (1.0.0 → 1.0.1)
+- minor bump - Commits with feat: or feature: (1.0.0 → 1.1.0)
+- major bump - Commits with BREAKING CHANGE or major: (1.0.0 → 2.0.0)
+
+GitHub releases and git tags are created automatically.
 
 ### Container Registry
 
