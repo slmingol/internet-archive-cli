@@ -1,5 +1,10 @@
 # Internet Archive CLI - Docker
 
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/slmingol/internet-archive-cli?style=for-the-badge&logo=github&color=blue)
+![Build Status](https://img.shields.io/github/actions/workflow/status/slmingol/internet-archive-cli/docker-build.yml?style=for-the-badge&logo=github-actions&logoColor=white)
+![Docker Image Size](https://img.shields.io/docker/image-size/slmingol/internet-archive-cli/latest?style=for-the-badge&logo=docker&logoColor=white)
+![GitHub last commit](https://img.shields.io/github/last-commit/slmingol/internet-archive-cli?style=for-the-badge&logo=git&logoColor=white)
+
 ![Docker](https://img.shields.io/badge/docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
 ![Python](https://img.shields.io/badge/python-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![Internet Archive](https://img.shields.io/badge/Internet_Archive-666666?style=for-the-badge&logo=internetarchive&logoColor=white)
