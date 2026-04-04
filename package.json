@@ -1,0 +1,13 @@
+{
+  "name": "internet-archive-cli",
+  "version": "1.0.0",
+  "description": "Docker containerized Internet Archive CLI with interactive prompts",
+  "private": false,
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/slmingol/internet-archive-cli.git"
+  },
+  "author": "slmingol",
+  "license": "MIT"
+}

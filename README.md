@@ -7,6 +7,18 @@
 
 Download items from Archive.org using a containerized environment.
 
+## Quick Start
+
+Pull the pre-built image from GitHub Container Registry:
+
+podman pull ghcr.io/slmingol/internet-archive-cli:latest
+podman run -it --rm -v ./downloads:/downloads ghcr.io/slmingol/internet-archive-cli:latest
+
+Or build locally with Docker Compose:
+
+podman compose build
+podman compose run --rm ia-downloader
+
 ## Usage
 
 ### Interactive Mode (Prompts for Item ID)
@@ -38,6 +50,24 @@ podman compose run --rm ia-downloader download 4613CS --glob="*.pdf"
 - `entrypoint.sh` - Interactive prompt script
 - `downloads/` - Downloaded files (created automatically)
 
+## CI/CD
+
+This project uses GitHub Actions for automated version management and Docker image publishing:
+
+### Semantic Versioning
+
+Commits trigger automatic version bumps based on commit messages:
+- patch bump - Regular commits
+- minor bump - Commits with feat: or feature:
+- major bump - Commits with BREAKING CHANGE or major:
+
+### Container Registry
+
+Docker images are automatically built and published to GitHub Container Registry:
+- ghcr.io/slmingol/internet-archive-cli:latest - Latest main branch build
+- ghcr.io/slmingol/internet-archive-cli:vX.Y.Z - Semantic version tags
+- Multi-architecture support: linux/amd64, linux/arm64
+
 ## Notes
 
-Downloads are saved to `./downloads/` in the project directory.
+Downloads are saved to ./downloads/ in the project directory.
