@@ -9,12 +9,16 @@ Download items from Archive.org using a containerized environment.
 
 ## Quick Start
 
-Pull the pre-built image from GitHub Container Registry:
+**Using pre-built image with Docker Compose:**
+
+podman compose -f docker-compose.run.yml run --rm ia-downloader
+
+**Using pre-built image directly:**
 
 podman pull ghcr.io/slmingol/internet-archive-cli:latest
 podman run -it --rm -v ./downloads:/downloads ghcr.io/slmingol/internet-archive-cli:latest
 
-Or build locally with Docker Compose:
+**Build locally:**
 
 podman compose build
 podman compose run --rm ia-downloader
@@ -46,7 +50,8 @@ podman compose run --rm ia-downloader download 4613CS --glob="*.pdf"
 ## Files
 
 - `Dockerfile` - Python container with internetarchive CLI
-- `docker-compose.yml` - Container orchestration
+- `docker-compose.yml` - Build and run locally
+- `docker-compose.run.yml` - Run pre-built image from GHCR
 - `entrypoint.sh` - Interactive prompt script
 - `downloads/` - Downloaded files (created automatically)
 

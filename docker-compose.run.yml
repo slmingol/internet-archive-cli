@@ -1,0 +1,10 @@
+version: '3.8'
+
+services:
+  ia-downloader:
+    image: ghcr.io/slmingol/internet-archive-cli:latest
+    container_name: ia-downloader
+    stdin_open: true
+    tty: true
+    volumes:
+      - ./downloads:/downloads
