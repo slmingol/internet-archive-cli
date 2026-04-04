@@ -1,0 +1,10 @@
+services:
+  ia-downloader:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: ia-downloader
+    stdin_open: true
+    tty: true
+    volumes:
+      - ./downloads:/downloads
