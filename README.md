@@ -12,67 +12,50 @@
 
 Download items from Archive.org using a containerized environment.
 
+> **Note:** All examples use `podman`. If using Docker, simply replace `podman` with `docker`.
+
 ## Quick Start
 
 **Using pre-built image with Docker Compose:**
-
-# Podman
+```bash
 podman compose -f docker-compose.run.yml run --rm ia-downloader
-
-# Docker
-docker compose -f docker-compose.run.yml run --rm ia-downloader
+```
 
 **Using pre-built image directly:**
-
-# Podman
+```bash
 podman pull ghcr.io/slmingol/internet-archive-cli:latest
 podman run -it --rm -v ./downloads:/downloads ghcr.io/slmingol/internet-archive-cli:latest
-
-# Docker
-docker pull ghcr.io/slmingol/internet-archive-cli:latest
-docker run -it --rm -v ./downloads:/downloads ghcr.io/slmingol/internet-archive-cli:latest
+```
 
 **Build locally:**
-
-# Podman
+```bash
 podman compose build
 podman compose run --rm ia-downloader
-
-# Docker
-docker compose build
-docker compose run --rm ia-downloader
+```
 
 ## Usage
 
 ### Interactive Mode (Prompts for Item ID)
-
-# Podman
+```bash
 podman compose run --rm ia-downloader
-
-# Docker
-docker compose run --rm ia-downloader
+```
 
 ### Direct Download with Item ID
-
-# Podman
+```bash
 podman compose run --rm ia-downloader download 4613CS
-
-# Docker
-docker compose run --rm ia-downloader download 4613CS
+```
 
 ### Use Any IA Command
-
+```bash
 # Search
 podman compose run --rm ia-downloader search "subject:computer science"
-docker compose run --rm ia-downloader search "subject:computer science"
 
 # List files without downloading
 podman compose run --rm ia-downloader list 4613CS
-docker compose run --rm ia-downloader list 4613CS
 
 # Download specific file
 podman compose run --rm ia-downloader download 4613CS --glob="*.pdf"
-docker compose run --rm ia-downloader download 4613CS --glob="*.pdf"
+```
 
 ## Files
 
