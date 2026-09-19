@@ -82,7 +82,7 @@ jobs:
           git push origin "v${{ steps.new-version.outputs.new_version }}"
 
       - name: Create GitHub Release
-        uses: softprops/action-gh-release@v2
+        uses: softprops/action-gh-release@v3
         with:
           tag_name: v${{ steps.new-version.outputs.new_version }}
           name: Release v${{ steps.new-version.outputs.new_version }}
